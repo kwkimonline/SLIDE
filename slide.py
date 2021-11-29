@@ -23,17 +23,16 @@ def true_nu(z, gamma, reduction = "mean") :
 
 class fair_penalty(nn.Module) :
 
-    def __init__(self, mode = "slide", gamma = 0.1, tau = 0.1) :
+    def __init__(self, mode = "slide", gamma = 0.5, tau = 0.1) :
         super(fair_penalty, self).__init__()
+        
         self.mode = mode
         self.gamma = gamma
         self.tau = tau
         print("gamma: {}, tau : {}".format(self.gamma, self.tau))
         self.ReLU = nn.ReLU()
-        self.logsigmoid = nn.LogSigmoid()
 
     def forward(self, pn, tau, gamma) :
-
         assert gamma == self.gamma
 
         if self.mode == "slide" :
@@ -44,6 +43,16 @@ class fair_penalty(nn.Module) :
         elif self.mode == "hinge" :
             hinge = self.ReLU(pn - gamma + 1)
             loss = hinge
+            
+        elif self.mode == "sigmoid":
+            sigmoid = torch.sigmoid(pn)
+            loss = sigmoid
+            
+        elif self.mode == "zero-one":
+            zero_one = pn
+            zero_one = zero_one[zero_one <= 0.0] = 0.0
+            zero_one = zero_one[zero_one > 0.0] = 1.0
+            loss = zero_one
 
         else :
             print("No other surrogate losses considered")
