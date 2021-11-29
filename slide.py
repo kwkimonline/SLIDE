@@ -3,24 +3,6 @@ import torch.nn as nn
 
 """ Fairness Constraints """
 
-def Indicator(x) :
-    x[x <= 0.0] = 0.0
-    x[x > 0.0] = 1.0
-    return x
-
-def true_nu(z, gamma, reduction = "mean") :
-
-    if reduction == "none" :
-        return Indicator(z - gamma)
-    elif reduction == "mean" :
-        return Indicator(z - gamma).mean()
-    elif reduction == "sum" :
-        return Indicator(z - gamma).sum()
-    else :
-        print("true fairness loss error")
-        raise NotImplementedError
-
-
 class fair_penalty(nn.Module) :
 
     def __init__(self, mode = "slide", gamma = 0.5, tau = 0.1) :
@@ -59,3 +41,20 @@ class fair_penalty(nn.Module) :
             raise NotImplementedError
 
         return loss.mean()
+
+def Indicator(x) :
+    x[x <= 0.0] = 0.0
+    x[x > 0.0] = 1.0
+    return x
+
+def true_nu(z, gamma, reduction = "mean") :
+
+    if reduction == "none" :
+        return Indicator(z - gamma)
+    elif reduction == "mean" :
+        return Indicator(z - gamma).mean()
+    elif reduction == "sum" :
+        return Indicator(z - gamma).sum()
+    else :
+        print("true fairness loss error")
+        raise NotImplementedError
