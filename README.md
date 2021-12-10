@@ -7,8 +7,8 @@ These source codes can learn (group) fair classifier with any custom dataset.
 
 1. Locate your custom_dataset in the directory "datasets/{custom_dataset}".
 
-2. Add loading function in "load.data_py" that should return (xs, x, y, s)
-where xs = torch.cat([x, s.reshape(s.size(0), 1)], dim=1).
+2. Add loading function in "load.data_py" that should returns a tuple ```(xs, x, y, s)``` consisting four ``` torch.tensor ```
+where ```xs = torch.cat([x, s.reshape(s.size(0), 1)], dim=1).```
 
 3. run SLIDE as the command: "python main.py --dataset {custom_dataset} --lmda {lmda}"
 where lmda is the fairness hyper-parameter, higher lmda increases the level of fairness (demographic parity or disparate impact).
