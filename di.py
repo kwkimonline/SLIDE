@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 
 from train import *
-from constraints import fair_penalty
+from slide import fair_penalty
 from load_data import *
 from utils import *
 from updates import *
