@@ -1,7 +1,7 @@
 # SLIDE
 
 This is the official implementation of "SLIDE: A surrogate fairness constraint to ensure fairness consistency".
-This source codes can learn (group) fair classifier with any custom dataset.
+These source codes can learn (group) fair classifier with any custom dataset.
 
 ## Usage
 
@@ -12,6 +12,11 @@ where xs = torch.cat([x, s.reshape(s.size(0), 1)], dim=1).
 
 3. run SLIDE as the command: "python main.py --dataset {custom_dataset} --lmda {lmda}"
 where lmda is the fairness hyper-parameter, higher lmda increases the level of fairness (demographic parity or disparate impact).
+
+For example, you can command
+```python
+python main.py --dataset law --lmda 5.0
+```
 
 ## Environments
 
