@@ -1,0 +1,18 @@
+dataset: "toy"
+result_path: "results/"
+opt: "adam"
+epochs: 2000
+batch_size: 50000
+lr: 5.0e-2
+seed: 2021
+device: 1
+
+model_type: "dnn"
+mode: "slide"
+norm: "two"
+
+epsilon: 0.1
+vat_iter: 1
+lmda: 0.0
+gamma: 0.01
+tau: 0.1
