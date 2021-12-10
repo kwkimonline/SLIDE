@@ -55,9 +55,9 @@ class Linear(nn.Module) :
 
 
 
-# Run DP
+# Run SLIDE + DI
 
-def di(args) :
+def runner(args) :
 
     print("=================================================================================")
 
