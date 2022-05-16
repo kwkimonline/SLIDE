@@ -3,6 +3,8 @@
 This is the official implementation of "SLIDE: A surrogate fairness constraint to ensure fairness consistency".
 These source codes can learn (group) fair classifier with any custom dataset.
 
+## To Be Modified
+
 ## Usage
 
 1. Locate your custom_dataset in the directory "datasets/{custom_dataset}".
