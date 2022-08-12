@@ -1,6 +1,6 @@
 # SLIDE
 
-Official pytorch implementation of ["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) published by [Neural Networks](https://www.journals.elsevier.com/neural-networks) (Volume 154, 2022, Pages 441-454) by Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.
+Official pytorch implementation of ["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) published in [Neural Networks](https://www.journals.elsevier.com/neural-networks) (Volume 154, 2022, Pages 441-454) by Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.
 
 
 ## Usage
@@ -23,5 +23,4 @@ python main.py --dataset law --lmda 5.0
 These codes are based on the following environments and versions of the corresponding libraries.
 
 python >= 3.6
-
 torch >= 1.8.0
