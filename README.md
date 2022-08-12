@@ -1,9 +1,7 @@
 # SLIDE
 
-This is the official implementation of "SLIDE: A surrogate fairness constraint to ensure fairness consistency".
-These source codes can learn (group) fair classifier with any custom dataset.
+Official pytorch implementation of ["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) published by [Neural Networks](https://www.journals.elsevier.com/neural-networks) (Volume 154, 2022, Pages 441-454) by Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.
 
-## To Be Modified
 
 ## Usage
 
