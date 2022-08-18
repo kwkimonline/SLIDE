@@ -25,16 +25,6 @@ class fair_penalty(nn.Module) :
         elif self.mode == "hinge" :
             hinge = self.ReLU(pn - gamma + 1)
             loss = hinge
-            
-        elif self.mode == "sigmoid":
-            sigmoid = torch.sigmoid(pn)
-            loss = sigmoid
-            
-        elif self.mode == "zero-one":
-            zero_one = pn
-            zero_one = zero_one[zero_one <= 0.0] = 0.0
-            zero_one = zero_one[zero_one > 0.0] = 1.0
-            loss = zero_one
 
         else :
             print("No other surrogate losses considered")
