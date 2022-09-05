@@ -6,8 +6,6 @@ import contextlib
 from tqdm import tqdm
 
 from utils import *
-from constraints import true_nu
-
 
 
 def train_full_batch_di(model, inputs, targets, sensitives, optimizer, scheduler, batch_size, lmda, tau, util_criterion, fair_criterion, device) :
