@@ -1,5 +1,7 @@
 # SLIDE
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Official pytorch implementation of ["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) published in [Neural Networks](https://www.journals.elsevier.com/neural-networks) (Volume 154, 2022, Pages 441-454) by Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.
 
 
