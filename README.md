@@ -9,20 +9,18 @@ Official pytorch implementation of ["SLIDE: A surrogate fairness constraint to e
 
 1. Locate your custom_dataset in the directory "datasets/{custom_dataset}".
 
-2. Add loading function in "load.data_py" that should returns a tuple ```(xs, x, y, s)``` consisting four ``` torch.tensor ```
+2. Add a data loading function in "load.data_py" returning a tuple ```(xs, x, y, s)``` consisting four variables of type ``` torch.tensor ```
 where ```xs = torch.cat([x, s.reshape(s.size(0), 1)], dim=1).```
 
-3. run SLIDE as the command: "python main.py --dataset {custom_dataset} --lmda {lmda}"
-where lmda is the fairness hyper-parameter, higher lmda increases the level of fairness (demographic parity or disparate impact).
+3. Run SLIDE using: "python main.py --dataset {custom_dataset} --lmda {lmda}"
+where lmda is the hyper-parameter (higher lmda, higher fairness level).
 
-For example, you can command
+An example of the command using the law school dataset is
 ```python
 python main.py --dataset law --lmda 5.0
 ```
 
 ## Environments
-
-These codes are based on the following environments and versions of the corresponding libraries.
 
 python >= 3.6
 torch >= 1.8.0
