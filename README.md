@@ -4,7 +4,7 @@
 
 ## **Overview**
 This repository contains the official PyTorch implementation of **SLIDE**, the algorithm proposed in the paper:  
-["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) by Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.
+["SLIDE: A surrogate fairness constraint to ensure fairness consistency"](https://www.sciencedirect.com/science/article/pii/S0893608022002891) by *Kunwoong Kim, Ilsang Ohn, Sara Kim, and Yongdai Kim.*
 
 The paper was published in **[Neural Networks](https://www.journals.elsevier.com/neural-networks)** (Volume 154, 2022, Pages 441-454).
 
